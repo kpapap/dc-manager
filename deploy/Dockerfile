@@ -48,7 +48,7 @@ ENV DC_MANAGER_BASE_URL="/"
 ENV DC_MANAGER_VERSION=${DC_MANAGER_VERSION}
 ENV DC_MANAGER_INSTALL_PATH=${DC_MANAGER_INSTALL_PATH}
 # Defaults to local mode (on-premise services). Use "cloud" for AWS setup.
-ENV DC_MANAGER_MODE=local
+ENV DC_MANAGER_MODE=cloud
 
 COPY --from=node /build/deploy/dist ${DC_MANAGER_INSTALL_PATH}
 COPY ./deploy/app.py ${DC_MANAGER_INSTALL_PATH}
